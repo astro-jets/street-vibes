@@ -1,28 +1,55 @@
-// PRESS THE MENU BUTTON TO TRIGGER ANIMATION
-// PRESS PLAY BUTTON TO LISTEN THE DEMO SONG
-
-// As seen on: "https://dribbble.com/shots/2144866-Day-5-Music-Player-Rebound/"
-
-// THANK YOU!
 window.onload = ()=>{
-var audio = document.getElementById('audio');
-var playpause = document.getElementById("play");
-const allMuisc = document.querySelectorAll("#music-item");
+   const allMuisc = document.querySelectorAll("#music-item");
+   let isPlaying = false;
+   let currentSong = {id:"",song:"",prev:""};
 
-allMuisc.forEach((m) => {
-   m.addEventListener("click", () => {
-      audio.firstChild.nextElementSibling.attributes[0].value ="player/"+ m.getAttribute("data-music")
-      togglePlayPause();
+   allMuisc.forEach((m) => {
+      m.addEventListener("click", () => {
+         let work = m.parentElement;
+         let audio = work.querySelector("#audio");
+         const playBtn = work.querySelector(".bi-play");
+         const pauseBtn = work.querySelector(".bi-pause");
+         
+         if(currentSong.song === audio.src || currentSong.song === "")
+         {            
+            if(isPlaying){
+               pauseSong(audio,pauseBtn);
+            }
+            else{
+               currentSong.song = audio.src;
+               currentSong.id = audio.id;
+               currentSong.prev = work;
+               playSong(audio,playBtn);
+            }
+         }
+         
+         else
+         {
+            let prevSong = currentSong.prev.querySelector("#audio");
+            let pb = currentSong.prev.querySelector(".bi-pause");
+            pauseSong(prevSong,pb)
+            currentSong.song = audio.src;
+            currentSong.id = audio.id;
+            currentSong.prev = work;
+            playSong(audio,playBtn);
+         }
+      });
    });
-});
 
-function togglePlayPause() {
-   if (audio.paused || audio.ended) {
-      playpause.title = "Pause";
+   function playSong(audio,playBtn)
+   {
       audio.play();
-   } else {
-      playpause.title = "Play";
-      audio.pause();
+      playBtn.classList.remove("bi-play")
+      playBtn.classList.add("bi-pause")
+      isPlaying = true;
    }
-}
+
+   function pauseSong(audio,pauseBtn)
+   {
+      audio.pause();
+      pauseBtn.classList.remove("bi-pause")
+      pauseBtn.classList.add("bi-play")
+      isPlaying = false;
+   }
+
 }
