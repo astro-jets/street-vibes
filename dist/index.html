@@ -8,14 +8,14 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-
     <!-- Favicons -->
     <link href="images/logo.png" rel="icon" />
     <link href="images/logo.png" rel="apple-touch-icon" />
 
     <!-- Vendor CSS Files -->
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,12 +25,6 @@
       rel="stylesheet"
     />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -144,7 +138,7 @@
                           href="#"
                           class="icon d-flex align-items-center justify-content-center"
                         >
-                          <span class="bi bi-play" data-music="loca.mp3"></span>
+                          <span class="bi bi-play"></span>
                         </div>
                       </div>
                       <div class="text text-dark w-100 text-center">
@@ -154,7 +148,8 @@
                         <audio
                           id="audio"
                           preload="auto"
-                          src="player/loca.mp3"
+                          src=""
+                          data-music="player/loca.mp3"
                         ></audio>
                       </div>
                     </div>
@@ -175,7 +170,7 @@
                         <div
                           class="icon d-flex align-items-center justify-content-center"
                         >
-                          <span class="bi bi-play" data-music="mpha.mp3"></span>
+                          <span class="bi bi-play"></span>
                         </div>
                       </div>
                       <div class="text text-dark w-100 text-center">
@@ -184,7 +179,8 @@
                         <audio
                           id="audio"
                           preload="auto"
-                          src="player/mbumu.mp3"
+                          src=""
+                          data-music="player/mbumu.mp3"
                         ></audio>
                       </div>
                     </div>
@@ -401,7 +397,6 @@
 
     <div id="preloader"></div>
 
-    <script src="player/player.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
@@ -411,6 +406,6 @@
     <script src="assets/vendor/aos/aos.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
   </body>
 </html>

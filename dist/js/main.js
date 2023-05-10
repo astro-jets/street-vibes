@@ -39,6 +39,68 @@
       });
     }
 
+    
+    // Music Player
+   const allMuisc = document.querySelectorAll("#music-item");
+   let isPlaying = false;
+   let isPaused = false;
+   let currentSong = {id:"",song:"",prev:""};
+
+   allMuisc.forEach((m) => {
+      m.addEventListener("click", () => {
+         let work = m.parentElement;
+         let audio = work.querySelector("#audio");
+         audio.src = audio.getAttribute("data-music");
+         const playBtn = work.querySelector(".bi-play");
+         const pauseBtn = work.querySelector(".bi-pause");
+         
+        //  Toogle play pause
+         if(currentSong.song === audio.getAttribute("data-music") || currentSong.song === "")
+         {            
+            if(isPlaying){
+               pauseSong(audio,pauseBtn);
+            }
+            else{
+               currentSong.song = audio.getAttribute("data-music");
+               currentSong.id = audio.id;
+               currentSong.prev = work;
+               playSong(audio,playBtn);
+            }
+         }
+         
+        //  play new song
+         else
+         {
+            let prevSong = currentSong.prev.querySelector("#audio");
+            let pb = currentSong.prev.querySelector(".bi-pause");
+            if(isPlaying){pauseSong(prevSong,pb)}
+            currentSong.song = audio.getAttribute("data-music");
+            currentSong.id = audio.id;
+            currentSong.prev = work;
+            playSong(audio,playBtn);
+         }
+      });
+   });
+
+   function playSong(audio,playBtn)
+   {
+      audio.play();
+      playBtn.classList.remove("bi-play")
+      playBtn.classList.add("bi-pause")
+      isPlaying = true;
+      isPaused = false;
+   }
+
+   function pauseSong(audio,pauseBtn)
+   {
+      audio.pause();
+      pauseBtn.classList.remove("bi-pause")
+      pauseBtn.classList.add("bi-play")
+      isPlaying = false;
+      isPaused = true;
+   }
+    // Music Player
+
     /**
      * Animation on scroll function and init
      */
