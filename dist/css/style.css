@@ -9550,4 +9550,95 @@ button:hover, button:focus {
 
 .container {
   width: 100% !important;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 100%;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-section .container-filter {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  text-align: center;
+}
+.gallery-section .container-filter li {
+  list-style: none;
+  display: inline-block;
+}
+.gallery-section .container-filter a {
+  display: block;
+  font-size: 14px;
+  margin: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 30px;
+  transition: all 0.6s;
+  border-bottom: 1px solid transparent;
+  color: #807c7c !important;
+}
+.gallery-section .container-filter a:hover {
+  color: #222222 !important;
+}
+.gallery-section .container-filter a.active {
+  color: #222222 !important;
+  border-bottom: 1px solid #222222;
+}
+.gallery-section .item-box {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.gallery-section .item-box a {
+  display: inline-block;
+}
+.gallery-section .item-box .item-mask {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.9);
+  position: absolute;
+  transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+}
+.gallery-section .item-box .item-mask .item-caption {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  opacity: 0;
+}
+.gallery-section .item-box:hover .item-mask {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer !important;
+}
+.gallery-section .item-box:hover .item-caption {
+  opacity: 1;
+}
+.gallery-section .item-box:hover .item-container {
+  width: 100%;
+}
+.gallery-section .services-box {
+  padding: 45px 25px 45px 25px;
 }/*# sourceMappingURL=style.css.map */
