@@ -101,32 +101,7 @@
    }
     // Music Player
 
-    // Isotope
-    var $container = $('.portfolioContainer');
-    var $filter = $('#filter');
-    $container.isotope({
-        filter: '*',
-        layoutMode: 'masonry',
-        animationOptions: {
-            duration: 750,
-            easing: 'linear'
-        }
-    });
-    $filter.find('a').click(function() {
-        var selector = $(this).attr('data-filter');
-        $filter.find('a').removeClass('active');
-        $(this).addClass('active');
-        $container.isotope({
-            filter: selector,
-            animationOptions: {
-                animationDuration: 750,
-                easing: 'linear',
-                queue: false,
-            }
-        });
-        return false;
-    });
-    // Isotope
+    
     /**
      * Animation on scroll function and init
      */
@@ -144,6 +119,35 @@
 
   });
 
+  // Isotope
+    var $container = $('.portfolioContainer');
+    var $filter = $('#filter');
+
+    if($container)
+    {  $container.isotope({
+          filter: '*',
+          layoutMode: 'masonry',
+          animationOptions: {
+              duration: 750,
+              easing: 'linear'
+          }
+      });
+      $filter.find('a').click(function() {
+          var selector = $(this).attr('data-filter');
+          $filter.find('a').removeClass('active');
+          $(this).addClass('active');
+          $container.isotope({
+              filter: selector,
+              animationOptions: {
+                  animationDuration: 750,
+                  easing: 'linear',
+                  queue: false,
+              }
+          });
+          return false;
+      });
+      // Isotope
+    }
 (function($) {
 
 	"use strict";
