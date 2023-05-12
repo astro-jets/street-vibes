@@ -9378,7 +9378,6 @@ header nav .nav-links {
     right: 0;
     bottom: 0;
     background: #000;
-    color: #fff;
     height: 100vh;
     width: 100% !important;
     margin: 0;
@@ -9386,6 +9385,9 @@ header nav .nav-links {
     clip-path: circle(100px at 90% -20%);
     -webkit-clip-path: circle(100px at 90% -20%);
     transition: all 1s ease-out;
+  }
+  header .nav-links li a {
+    color: #fff !important;
   }
   header .nav-links.open {
     clip-path: circle(1000px at 90% -20%);
@@ -9622,48 +9624,4 @@ button:hover, button:focus {
 .gallery-section .container-filter a.active {
   color: #222222 !important;
   border-bottom: 1px solid #222222;
-}
-.gallery-section .item-box {
-  position: relative;
-  overflow: hidden;
-  display: block;
-}
-.gallery-section .item-box a {
-  display: inline-block;
-}
-.gallery-section .item-box .item-mask {
-  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.9);
-  position: absolute;
-  transition: all 0.5s ease-in-out 0s;
-  -moz-transition: all 0.5s ease-in-out 0s;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  -o-transition: all 0.5s ease-in-out 0s;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  text-align: center;
-}
-.gallery-section .item-box .item-mask .item-caption {
-  position: absolute;
-  width: 100%;
-  bottom: 10px;
-  opacity: 0;
-}
-.gallery-section .item-box:hover .item-mask {
-  opacity: 1;
-  visibility: visible;
-  cursor: pointer !important;
-}
-.gallery-section .item-box:hover .item-caption {
-  opacity: 1;
-}
-.gallery-section .item-box:hover .item-container {
-  width: 100%;
-}
-.gallery-section .services-box {
-  padding: 45px 25px 45px 25px;
 }/*# sourceMappingURL=style.css.map */
