@@ -9648,9 +9648,17 @@ button:hover, button:focus {
   .gallery-section {
     height: 220vh !important;
   }
+  .gallery-section .col-lg-12 {
+    padding: 0 !important;
+  }
+  .gallery-section a.catigories {
+    margin: 0 !important;
+  }
   .gallery-section .el-element-overlay {
+    width: 100% !important;
+    overflow: hidden !important;
     display: grid !important;
-    grid-gap: 5% 18%;
+    grid-gap: 5% 10%;
     padding: 0 3% !important;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -9676,5 +9684,12 @@ button:hover, button:focus {
   }
   .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-element-overlay .el-card-item .el-card-content {
     height: 30% !important;
+  }
+  .gallery-section .portfolioFilte {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .gallery-section .portfolioFilte li {
+    width: 30% !important;
   }
 }/*# sourceMappingURL=style.css.map */
