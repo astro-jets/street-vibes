@@ -9605,6 +9605,9 @@ button:hover, button:focus {
 }
 
 @media screen and (max-width: 760px) {
+  .hide-sm {
+    display: none !important;
+  }
   body {
     position: relative !important;
     height: 750vh;
@@ -9619,7 +9622,7 @@ button:hover, button:focus {
     box-shadow: 0 3px 5px 8px rgba(0, 0, 0, 0.15);
     border-radius: 30px !important;
     width: 40vw !important;
-    height: 45vh !important;
+    height: 45dvh !important;
     padding: 1% !important;
     overflow: hidden !important;
   }
