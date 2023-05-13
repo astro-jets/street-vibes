@@ -9608,9 +9608,8 @@ button:hover, button:focus {
   .hide-sm {
     display: none !important;
   }
-  body {
-    position: relative !important;
-    height: 750vh;
+  .gallery-section {
+    height: 220vh !important;
   }
   .gallery-section .el-element-overlay {
     display: grid !important;
@@ -9621,8 +9620,8 @@ button:hover, button:focus {
   .gallery-section .el-element-overlay .col-lg-3.col-md-6 {
     box-shadow: 0 3px 5px 8px rgba(0, 0, 0, 0.15);
     border-radius: 30px !important;
-    width: 40vw !important;
-    height: 45dvh !important;
+    width: 45vw !important;
+    height: 260px !important;
     padding: 1% !important;
     overflow: hidden !important;
   }
@@ -9641,9 +9640,41 @@ button:hover, button:focus {
   .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-element-overlay .el-card-item .el-card-content {
     height: 30% !important;
   }
-  .footer {
-    height: 150vh;
-    position: absolute !important;
-    bottom: 0 !important;
+}
+@media screen and (max-width: 380px) {
+  .hide-sm {
+    display: none !important;
+  }
+  .gallery-section {
+    height: 220vh !important;
+  }
+  .gallery-section .el-element-overlay {
+    display: grid !important;
+    grid-gap: 5% 18%;
+    padding: 0 3% !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-section .el-element-overlay .col-lg-3.col-md-6 {
+    box-shadow: 0 3px 5px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 30px !important;
+    width: 45vw !important;
+    height: 240px !important;
+    padding: 1% !important;
+    overflow: hidden !important;
+  }
+  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+  }
+  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-element-overlay .el-card-item {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-element-overlay .el-card-item .el-card-avatar {
+    height: 70% !important;
+  }
+  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-element-overlay .el-card-item .el-card-content {
+    height: 30% !important;
   }
 }/*# sourceMappingURL=style.css.map */
