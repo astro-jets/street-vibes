@@ -9419,7 +9419,7 @@ body {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 a {
@@ -9608,21 +9608,33 @@ button:hover, button:focus {
   .hide-sm {
     display: none !important;
   }
+  .container {
+    padding: 0 !important;
+  }
   .gallery-section {
-    height: 220vh !important;
+    height: auto;
+    max-height: 200vh !important;
+    width: 100% !important;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+  .gallery-section .portfolioContainer {
+    width: 100%;
+    overflow: hidden !important;
   }
   .gallery-section .el-element-overlay {
     display: grid !important;
-    grid-gap: 5% 18%;
+    grid-gap: 5% 5%;
     padding: 0 3% !important;
     grid-template-columns: repeat(2, 1fr);
+    width: 100% !important;
+    overflow: hidden;
   }
   .gallery-section .el-element-overlay .col-lg-3.col-md-6 {
     box-shadow: 0 3px 5px 8px rgba(0, 0, 0, 0.15);
     border-radius: 30px !important;
-    width: 45vw !important;
-    height: 260px !important;
-    padding: 1% !important;
+    width: 90% !important;
+    height: auto !important;
     overflow: hidden !important;
   }
   .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card {
@@ -9646,7 +9658,7 @@ button:hover, button:focus {
     display: none !important;
   }
   .gallery-section {
-    height: 220vh !important;
+    padding: 0 2%;
   }
   .gallery-section .col-lg-12 {
     padding: 0 !important;
@@ -9658,16 +9670,15 @@ button:hover, button:focus {
     width: 100% !important;
     overflow: hidden !important;
     display: grid !important;
-    grid-gap: 5% 10%;
+    grid-gap: 5%;
     padding: 0 3% !important;
     grid-template-columns: repeat(2, 1fr);
   }
   .gallery-section .el-element-overlay .col-lg-3.col-md-6 {
     box-shadow: 0 3px 5px 8px rgba(0, 0, 0, 0.15);
     border-radius: 30px !important;
-    width: 45vw !important;
-    height: 240px !important;
-    padding: 1% !important;
+    width: 90% !important;
+    padding: 0 !important;
     overflow: hidden !important;
   }
   .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card {
@@ -9675,14 +9686,14 @@ button:hover, button:focus {
     height: 100% !important;
     border: 0 !important;
   }
-  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-element-overlay .el-card-item {
+  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-card-item {
     width: 100% !important;
     height: 100% !important;
   }
-  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-element-overlay .el-card-item .el-card-avatar {
+  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-card-item .el-card-avatar {
     height: 70% !important;
   }
-  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-element-overlay .el-card-item .el-card-content {
+  .gallery-section .el-element-overlay .col-lg-3.col-md-6 .card .el-card-item .el-card-content {
     height: 30% !important;
   }
   .gallery-section .portfolioFilte {
