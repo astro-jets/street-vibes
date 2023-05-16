@@ -9610,7 +9610,7 @@ button:hover, button:focus {
   }
   .gallery-section {
     max-height: 500vh !important;
-    height: auto;
+    height: 220vh;
     width: 100% !important;
     overflow: hidden;
     padding: 0 !important;
@@ -9653,6 +9653,7 @@ button:hover, button:focus {
   .gallery-section .music-genre-section {
     display: flex;
     justify-content: center;
+    margin-bottom: 3rem;
   }
 }
 @media screen and (max-width: 380px) {
