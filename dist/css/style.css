@@ -9382,16 +9382,16 @@ header nav .nav-links {
     width: 100% !important;
     margin: 0;
     flex-direction: column;
-    clip-path: circle(100px at 90% -20%);
-    -webkit-clip-path: circle(100px at 90% -20%);
+    clip-path: circle(100px at 90% -30%);
+    -webkit-clip-path: circle(100px at 90% -30%);
     transition: all 1s ease-out;
   }
   header .nav-links li a {
     color: #fff !important;
   }
   header .nav-links.open {
-    clip-path: circle(1000px at 90% -20%);
-    -webkit-clip-path: circle(1000px at 90% -20%);
+    clip-path: circle(1000px at 90% -30%);
+    -webkit-clip-path: circle(1000px at 90% -30%);
   }
   header .hamburger {
     z-index: 9999;
@@ -9621,7 +9621,7 @@ button:hover, button:focus {
   }
   .gallery-section .el-element-overlay {
     width: 100% !important;
-    padding: 5% !important;
+    padding: 2rem 5% !important;
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-around !important;
@@ -9653,7 +9653,6 @@ button:hover, button:focus {
   .gallery-section .music-genre-section {
     display: flex;
     justify-content: center;
-    padding: 1.5rem 0 !important;
   }
 }
 @media screen and (max-width: 380px) {
