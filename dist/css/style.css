@@ -9610,7 +9610,7 @@ button:hover, button:focus {
   }
   .gallery-section {
     max-height: 500vh !important;
-    height: auto !important;
+    height: 200vh !important;
     width: 100% !important;
     overflow: hidden;
     padding: 0 !important;
