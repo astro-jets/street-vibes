@@ -9809,6 +9809,7 @@ button:hover, button:focus {
   padding-bottom: 56.25%;
   height: 0;
   width: 100%;
+  z-index: 9999;
 }
 
 .video-container iframe {
