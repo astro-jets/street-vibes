@@ -9905,6 +9905,9 @@ button:hover, button:focus {
     display: flex;
     justify-content: center;
   }
+  .gallery-section .el-element-overlay .el-card-item .el-overlay-1 img {
+    height: 100% !important;
+  }
 }
 @media screen and (max-width: 380px) {
   .hide-sm {
